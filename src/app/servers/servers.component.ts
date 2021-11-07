@@ -11,8 +11,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
-  name:string = "Bui Thanh Tuan";
-  age:number = 23;
+  name: string = "Bui Thanh Tuan";
+  age: number = 23;
+  isAvailiable: boolean = false;
+
   
   constructor() { }
 
