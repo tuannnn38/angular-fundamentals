@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-servers',
   templateUrl: './servers.component.html',
-  // styleUrls: ['./servers.component.css']
   styles: [`
     h3 {
       color: red
@@ -12,6 +11,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
+  name:string = "Bui Thanh Tuan";
+  age:number = 23;
+  
   constructor() { }
 
   ngOnInit(): void {
