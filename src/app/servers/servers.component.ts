@@ -15,10 +15,17 @@ export class ServersComponent implements OnInit {
   age: number = 23;
   isAvailiable: boolean = false;
 
-  
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onUpdateAge(){
+    this.age += 1;
+  }
+
+  onUpdateName(event: Event){
+    this.name = (<HTMLInputElement>event.target).value;
+  }
+  
 }

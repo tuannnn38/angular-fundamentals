@@ -5,7 +5,11 @@
             <h3 class="text-primary">App Servers</h3>
             <hr>
             <h4>My name is {{ name }}. I'm {{ age }}. {{ "I'm happy for my life" }}</h4>
-            <button [disabled] = "isAvailiable">Add</button>
+            <input type="text" (input) = "onUpdateName($event)"/>
+            <hr>
+            <button class="btn btn-primary d-block" [disabled] = "isAvailiable">Add</button>
+            <hr>
+            <button class="btn btn-primary" (click)="onUpdateAge()">Update age</button>
             <app-server></app-server>
             <app-server></app-server>
         </div>
