@@ -9,4 +9,16 @@ import { Component } from "@angular/core";
     `]
 })
 
-export class ServerComponent {};
+export class ServerComponent {
+    
+    serverStatus: string = 'offline';
+
+    constructor(){
+        this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
+    }
+
+    getStatus(){
+        return this.serverStatus === 'online' ? 'green' : 'red'
+    }
+    
+};

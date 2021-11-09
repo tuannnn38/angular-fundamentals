@@ -14,6 +14,7 @@ export class ServersComponent implements OnInit {
   name: string = "Bui Thanh Tuan";
   age: number = 23;
   isAvailiable: boolean = false;
+  isClicked:boolean = false;
 
   constructor() { }
 
@@ -22,6 +23,7 @@ export class ServersComponent implements OnInit {
 
   onUpdateAge(){
     this.age += 1;
+    this.isClicked = true;
   }
 
   onUpdateName(event: Event){

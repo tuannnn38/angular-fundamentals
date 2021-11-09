@@ -8,8 +8,13 @@
             <!-- <input type="text" (input) = "onUpdateName($event)"/> -->
             <input type="text" class="form-control" [(ngModel)]="name"/>
             <hr>
-            <button class="btn btn-primary d-block" [disabled] = "isAvailiable">Add</button>
+            <button class="btn btn-primary d-block" [disabled] = "isAvailiable" >Add</button>
             <hr>
+            <h4 *ngIf="isClicked; else elseCondition">I'm using NgIf</h4>
+            <ng-template #elseCondition>
+                <h4>I'm using NgElse = NgTemplate + Marker</h4>
+            </ng-template>    
+
             <button class="btn btn-primary" (click)="onUpdateAge()">Update age</button>
             <app-server></app-server>
             <app-server></app-server>
