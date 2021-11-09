@@ -8,7 +8,7 @@
             <!-- <input type="text" (input) = "onUpdateName($event)"/> -->
             <input type="text" class="form-control" [(ngModel)]="name"/>
             <hr>
-            <button class="btn btn-primary d-block" [disabled] = "isAvailiable" >Add</button>
+            <button class="btn btn-primary d-block" [disabled] = "isAvailiable" (click) = "addName()">Add</button>
             <hr>
             <h4 *ngIf="isClicked; else elseCondition">I'm using NgIf</h4>
             <ng-template #elseCondition>
@@ -16,8 +16,8 @@
             </ng-template>    
 
             <button class="btn btn-primary" (click)="onUpdateAge()">Update age</button>
-            <app-server></app-server>
-            <app-server></app-server>
+            <app-server *ngFor="let item of names"></app-server>
+            
         </div>
     </div>
 </div>

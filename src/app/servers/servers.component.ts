@@ -15,6 +15,7 @@ export class ServersComponent implements OnInit {
   age: number = 23;
   isAvailiable: boolean = false;
   isClicked:boolean = false;
+  names = ['Bui Thanh Tuan', 'Bui Thanh Sang']
 
   constructor() { }
 
@@ -28,6 +29,10 @@ export class ServersComponent implements OnInit {
 
   onUpdateName(event: Event){
     this.name = (<HTMLInputElement>event.target).value;
+  }
+
+  addName(){
+    this.names.push(this.name);    
   }
   
 }

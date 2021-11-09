@@ -3,8 +3,8 @@ import { Component } from "@angular/core";
     selector: 'app-server',
     templateUrl: './server.component.html',
     styles:[`
-        h3{
-           color: gray 
+        .online{
+            color: white 
         }
     `]
 })
